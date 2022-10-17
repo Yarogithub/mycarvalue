@@ -1,7 +1,49 @@
+### create a user
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "test@test.com",
-  "password": "admin1234"
+  "email": "passwordtest2@test.com",
+  "password": "admin12345678"
 }
+
+### signin
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "passwordtest2@test.com",
+  "password": "admin12345678"
+}
+
+### signout
+POST http://localhost:3000/auth/signout
+
+### whoami
+GET http://localhost:3000/auth/whoami
+
+### get User
+GET http://localhost:3000/auth/2
+
+
+### get Users
+GET http://localhost:3000/auth?email=test@test.com
+
+
+### delete User
+DELETE http://localhost:3000/auth/21313113
+
+### update a user
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+  "password": "adsa"
+}
+
+
+### set Color
+GET http://localhost:3000/auth/colors/blue
+
+### get Color
+GET http://localhost:3000/auth/colors
